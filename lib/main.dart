@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_native_splash/flutter_native_splash.dart';
+import 'package:untitled/pages/splash.dart';
 import 'package:untitled/tabs/h1.dart';
 import 'package:untitled/tabs/h2.dart';
 import 'package:untitled/tabs/h3.dart';
@@ -8,7 +9,7 @@ import 'package:untitled/tabs/h4.dart';
 void main() {
 //  WidgetsBinding binding = WidgetsFlutterBinding.ensureInitialized();
  // FlutterNativeSplash.preserve(widgetsBinding: binding);
-  runApp(const Home4());
+  runApp(const Splash());
 }
 
 
