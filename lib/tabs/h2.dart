@@ -5,8 +5,12 @@ class Home2 extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(decoration: BoxDecoration(
-      color: Colors.amberAccent,
-    ),);
+    return Container(
+      width: 500,
+      height: 200,
+      decoration: BoxDecoration(
+        color: Colors.amberAccent,
+      ),
+    );
   }
 }
