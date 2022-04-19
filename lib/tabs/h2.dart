@@ -11,6 +11,8 @@ class Home2 extends StatelessWidget {
       decoration: BoxDecoration(
         color: Colors.amberAccent,
       ),
+      child: TextFormField(),
+
     );
   }
 }

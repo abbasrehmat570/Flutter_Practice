@@ -9,7 +9,7 @@ import 'package:untitled/tabs/h4.dart';
 void main() {
 //  WidgetsBinding binding = WidgetsFlutterBinding.ensureInitialized();
  // FlutterNativeSplash.preserve(widgetsBinding: binding);
-  runApp(const Splash());
+  runApp(const MyApp());
 }
 
 
