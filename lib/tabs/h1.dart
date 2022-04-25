@@ -11,7 +11,6 @@ class Home1 extends StatefulWidget {
 class _Home1State extends State<Home1> {
   @override
   Widget build(BuildContext context) {
-
     return Container(
       margin: EdgeInsets.all(20),
       child: Column(
@@ -22,29 +21,26 @@ class _Home1State extends State<Home1> {
             padding: EdgeInsets.all(10),
             child: Center(
               child: TextFormField(
-                style: TextStyle(color: Colors.black,height: 0),
+                style: TextStyle(color: Colors.black, height: 0),
                 //textDirection: TextDirection.ltr,
 
-              //  textAlignVertical: TextAlignVertical.center,
+                //  textAlignVertical: TextAlignVertical.center,
 
                 decoration: const InputDecoration(
                   //icon: Icon(Icons.people),
                   prefixIcon: Icon(Icons.people),
 
                   hintText: "Enter Username",
-                 // hintStyle: TextStyle(height: 20,fontWeight: FontWeight.bold),
+                  // hintStyle: TextStyle(height: 20,fontWeight: FontWeight.bold),
                   labelText: "Username",
                   floatingLabelAlignment: FloatingLabelAlignment.start,
-                 // floatingLabelStyle: TextStyle(height: -0.2,fontSize: 20),
-contentPadding: EdgeInsets.only(top: 10),
+                  // floatingLabelStyle: TextStyle(height: -0.2,fontSize: 20),
+                  contentPadding: EdgeInsets.only(top: 10),
 
-
-                 // floatingLabelAlignment: FloatingLabelAlignment.center,
-               //   alignLabelWithHint: true,
+                  // floatingLabelAlignment: FloatingLabelAlignment.center,
+                  //   alignLabelWithHint: true,
                   border: InputBorder.none,
-              //    isCollapsed: true,
-
-
+                  //    isCollapsed: true,
                 ),
               ),
             ),
@@ -55,18 +51,12 @@ contentPadding: EdgeInsets.only(top: 10),
           SizedBox(
             height: 100,
           ),
-          Container(
-            child: TextFormField(
-              decoration: const InputDecoration(
-                icon: Icon(Icons.email),
-                hintText: "Enter Email",
-                labelText: "Email",
-
-              ),
+          TextFormField(
+            decoration: const InputDecoration(
+              hintText: "Enter Email",
+              labelText: "Email",
+              border: OutlineInputBorder(),
             ),
-            decoration: BoxDecoration(
-                color: Colors.lightGreen,
-                borderRadius: BorderRadiusDirectional.circular(20)),
           ),
           SizedBox(
             height: 10,
@@ -78,7 +68,6 @@ contentPadding: EdgeInsets.only(top: 10),
                 icon: Icon(Icons.password),
                 hintText: "Enter Password",
                 labelText: "Password",
-
               ),
             ),
             decoration: BoxDecoration(
