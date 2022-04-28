@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_native_splash/flutter_native_splash.dart';
 import 'package:untitled/pages/splash.dart';
+import 'package:untitled/tabs/codelabs.dart';
 import 'package:untitled/tabs/h1.dart';
 import 'package:untitled/tabs/h2.dart';
 import 'package:untitled/tabs/h3.dart';
@@ -47,7 +48,7 @@ class _MyAppState extends State<MyApp> {
               tabs: [
                 Tab(
                   icon: Icon(Icons.home),
-                  text: "Home",
+                  text: "Input Text",
                 ),
                 Tab(
                   icon: Icon(Icons.home_max_rounded),
@@ -61,19 +62,26 @@ class _MyAppState extends State<MyApp> {
                   icon: Icon(Icons.home_work),
                   text: "Home4",
                 ),
+                Tab(
+                  icon: Icon(Icons.code),
+                  text: "Code labs",
+                ),
               ],
             ),
           ),
           body: const TabBarView(
+
             children: [
               Home1(),
               Home2(),
               Home3(),
               Home4(),
+              CodeLabs(),
+
             ],
           ),
         ),
-        length: 4,
+        length: 5,
       ),
       debugShowCheckedModeBanner: false,
     );
