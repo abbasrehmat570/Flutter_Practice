@@ -11,6 +11,7 @@ class Home2 extends StatefulWidget {
 }
 
 class _Home2State extends State<Home2> {
+  //
   Uri url = Uri.parse("https://jsonplaceholder.typicode.com/photos");
   var data;
 
