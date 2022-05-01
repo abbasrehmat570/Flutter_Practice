@@ -80,10 +80,12 @@ class _MyAppState extends State<MyApp> {
 
             ],
           ),
+          drawer: Drawer(),
         ),
         length: 5,
       ),
       debugShowCheckedModeBanner: false,
+
     );
   }
 }
