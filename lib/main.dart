@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/rendering.dart';
 import 'package:flutter_native_splash/flutter_native_splash.dart';
 import 'package:untitled/pages/splash.dart';
 import 'package:untitled/tabs/codelabs.dart';
@@ -11,6 +12,7 @@ void main() {
 //  WidgetsBinding binding = WidgetsFlutterBinding.ensureInitialized();
  // FlutterNativeSplash.preserve(widgetsBinding: binding);
   runApp(const MyApp());
+
 }
 
 
@@ -85,6 +87,7 @@ class _MyAppState extends State<MyApp> {
         length: 5,
       ),
       debugShowCheckedModeBanner: false,
+
 
     );
   }
