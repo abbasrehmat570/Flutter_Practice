@@ -80,6 +80,41 @@ class _MyDrawerState extends State<MyDrawer> {
               ),
             );
           }),
+      ListTile(
+          title: Theme.of(context).platform == TargetPlatform.android
+              ? Text("Tab")
+              : Text("Tab1"),
+          leading: Icon(Icons.tab),
+          onTap: () {
+            Navigator.push(
+              context,
+              MaterialPageRoute(
+                builder: (context) => TabMain(4),
+              ),
+            );
+          }),
+      ListTile(
+          title: Text("Tab"),
+          leading: Icon(Icons.tab),
+          onTap: () {
+            Navigator.push(
+              context,
+              MaterialPageRoute(
+                builder: (context) => TabMain(4),
+              ),
+            );
+          }),
+      ListTile(
+          title: Text("Tab"),
+          leading: Icon(Icons.tab),
+          onTap: () {
+            Navigator.push(
+              context,
+              MaterialPageRoute(
+                builder: (context) => TabMain(4),
+              ),
+            );
+          }),
     ]);
   }
 }

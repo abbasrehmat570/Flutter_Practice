@@ -16,7 +16,7 @@ void main() {
 }
 
 class MyApp extends StatefulWidget {
-  MyApp({
+  const MyApp({
     Key? key,
   }) : super(key: key);
 
@@ -32,8 +32,9 @@ class _MyAppState extends State<MyApp> {
         appBar: AppBar(
           title: Text("HomePage"),
         ),
-        body: IconButton(icon: Icon(Icons.home),
-        onPressed: (){},
+        body: IconButton(
+          icon: Icon(Icons.home),
+          onPressed: () {},
         ),
         drawer: MyDrawer(),
       ),
