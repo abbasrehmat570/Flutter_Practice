@@ -1,16 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 import 'package:flutter/services.dart';
-import 'package:flutter_native_splash/flutter_native_splash.dart';
+import 'package:untitled/pages/cupertino.dart';
 import 'package:untitled/pages/my_widgets.dart';
 import 'package:untitled/pages/mycustoms.dart';
 import 'package:untitled/pages/mydrawer.dart';
-import 'package:untitled/pages/splash.dart';
-import 'package:untitled/tabs/codelabs.dart';
-import 'package:untitled/tabs/h1.dart';
-import 'package:untitled/tabs/h2.dart';
-import 'package:untitled/tabs/h3.dart';
-import 'package:untitled/tabs/h4.dart';
+import 'package:flutter/cupertino.dart';
+import 'package:untitled/pages/webviews.dart';
 
 void main() {
   WidgetsFlutterBinding.ensureInitialized();
@@ -31,9 +27,7 @@ class MyApp extends StatefulWidget {
 class _MyAppState extends State<MyApp> {
   @override
   Widget build(BuildContext context) {
-    final _controller = PageController(
-      initialPage: 1,
-    );
+    final _controller = PageController(initialPage: 1, viewportFraction: 0.8);
 
     return MaterialApp(
       home: Scaffold(
@@ -63,8 +57,9 @@ class _MyAppState extends State<MyApp> {
           Container(
             width: 250,
             color: Colors.grey,
+            margin: EdgeInsets.all(10),
             padding: EdgeInsets.all(5),
-            height: 210,
+            height: 500,
             child: PageView(
               pageSnapping: true,
               controller: _controller,
@@ -95,23 +90,40 @@ class MyBody extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Column(
-      children: [
-        GestureDetector(
-          child: Image(
-            image: AssetImage("assets/images/img.png"),
+    return Container(
+      margin: EdgeInsets.all(10),
+      child: Column(
+        children: [
+          GestureDetector(
+            child: Image(
+              image: AssetImage("assets/images/img.png"),
+            ),
+            onTap: () => Navigator.push(
+                context, MaterialPageRoute(builder: (context) => MyPractice())),
           ),
-          onTap: () => Navigator.push(
-              context, MaterialPageRoute(builder: (context) => MyPractice())),
-        ),
-        SizedBox(
-          height: 10,
-        ),
-        MaterialButton(
+          MaterialButton(
+              child: Text("Cupertino"),
+              onPressed: () {
+                Navigator.push(context,
+                    MaterialPageRoute(builder: (context) => MyCupertino()));
+                print("object");
+              }),
+          SizedBox(
+            height: 10,
+          ),
+          MaterialButton(
             child: Icon(Icons.dashboard_customize),
             onPressed: () => Navigator.push(
-                context, MaterialPageRoute(builder: (context) => MyCustoms())))
-      ],
+                context, MaterialPageRoute(builder: (context) => MyCustoms())),
+          ),
+          ElevatedButton(
+              onPressed: () => Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => MyWebView())
+                  ),
+              child: Text("Webview")),
+        ],
+      ),
     );
   }
 }
